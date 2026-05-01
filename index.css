@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  background: #020817;
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+}
+
+/* iOS safe area */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+select option {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
+
+input[type=date]::-webkit-calendar-picker-indicator { filter: invert(0.4); }
+input[type=number]::-webkit-inner-spin-button { opacity: 0.3; }
+
+.last-no-border:last-child { border-bottom: none !important; }
